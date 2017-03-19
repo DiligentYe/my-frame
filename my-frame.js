@@ -18,8 +18,8 @@
 
         for (var i = 0, len = items.length; i < len; ++i) {
             var item = items[i].split('=');
-            key = item[0];
-            value = item[1];
+            key = decodeURIComponent(item[0]);
+            value = decodeURIComponent(item[1]);
 
             args[key] = value;
         }
